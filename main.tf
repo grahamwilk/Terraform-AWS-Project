@@ -46,6 +46,10 @@ resource "aws_s3_bucket_policy" "public_read" {
   })
 }
 
+output "bucket_name" {
+  value = aws_s3_bucket.website_bucket.bucket
+}
+
 output "website_url" {
   value = aws_s3_bucket.website_bucket.website_endpoint
 }
